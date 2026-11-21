@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7faf8">
+  <meta name="description" content="Tenlai-TTS 2.0 — End-to-End Training for Continuous-Representation LLM-Based Text-to-Speech. Research abstract.">
+  <meta property="og:title" content="Tenlai-TTS 2.0 — End-to-End Training for Continuous-Representation LLM-Based Text-to-Speech">
+  <meta property="og:description" content="Continuous speech representations, learned through end-to-end training.">
+  <meta property="og:type" content="website">
+  <title>Tenlai-TTS 2.0 — End-to-End Training for Continuous-Representation LLM-Based Text-to-Speech</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./assets/fonts.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to abstract</a>
+  <header class="masthead">
+    <a class="wordmark" href="#top" aria-label="Tenlai-TTS 2.0, top of page">
+      <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 13v6M10 8v16M16 3v26M22 10v12M28 14v4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Tenlai<span class="wordmark-light"> · TTS 2.0</span></span>
+    </a>
+    <a class="header-link" href="#abstract">Abstract</a>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="paper-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="eyebrow">Tenlai-TTS 2.0 <span aria-hidden="true">/</span> Technical report</p>
+      <h1 id="paper-title"><span>End-to-End Training for</span> <span class="title-accent">Continuous-Representation</span> <span>LLM-Based Text-to-Speech</span></h1>
+      <div class="signal-art" aria-hidden="true"><img src="./assets/signal.svg" alt="" width="1000" height="120"></div>
+    </section>
+    <section class="abstract-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="section-heading"><span class="section-rule" aria-hidden="true"></span><h2 id="abstract-title">Abstract</h2></div>
+      <div class="abstract-copy">
+<p>Autoregressive text-to-speech (TTS) with continuous speech latents avoids the information loss of quantization, but its quality is bounded by a latent space that is usually learned in a separate stage and then frozen. Such a space has to serve two conflicting goals: it must retain enough acoustic detail for high-fidelity reconstruction, yet be sufficiently structured and regularized to support autoregressive prediction by a language model.</p>
+<p>We present <strong>Tenlai-TTS 2.0</strong>, which learns continuous speech representations through end-to-end training to balance acoustic detail with autoregressive predictability. The model combines a speech encoder with a capacity-controlled Gaussian bottleneck, an LLM with an autoregressive diffusion-transformer (AR-DiT) head, a flow-matching (FM) mel decoder, and a multi-task recognition model (RM). Energy normalization and fixed-variance Gaussian noise give the bottleneck a closed-form information-rate upper bound. The encoder is first trained jointly with reconstruction, recognition, and next-patch prediction objectives, allowing the model to find a representation that suits all of them. We then optimize the LLM&#x27;s latent predictions using differentiable feedback from reconstruction and recognition objectives, evaluated through the FM decoder and a frozen RM.</p>
+<p>On Seed-TTS-eval, feedback-based optimization reduces CER from 0.82% to 0.74% on zh test set and from 8.32% to 7.08% on hard-zh test set, while reducing WER from 1.32% to 1.27% on en test set, compared with the stage of joint training. Subsequent reinforcement learning further reduces the CER to 6.29% on hard-zh test set and the WER to 1.08% on en test set, with speaker similarity scores of 0.811, 0.766, and 0.784 on the zh, en, and hard-zh test sets, respectively.</p>
+      </div>
+    </section>
+    <!-- Audio demos are intentionally omitted. Add a new section here when the samples are ready. -->
+  </main>
+  <footer class="page-footer"><span>Tenlai-TTS 2.0</span><span>End-to-end speech synthesis</span></footer>
+</body>
+</html>
