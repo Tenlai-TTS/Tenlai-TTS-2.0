@@ -2,7 +2,7 @@
 
 Academic demo page for **End-to-End Training for Continuous-Representation LLM-Based Text-to-Speech**.
 
-The initial page contains the paper title and abstract. Audio demos are intentionally omitted until the samples are ready. The abstract follows the active (uncommented) manuscript text retrieved on 2026-11-21; editorial suggestions from the chat are not substituted automatically.
+The initial page contains the paper title and abstract. Audio demos are intentionally omitted until the samples are ready. The abstract follows the active (uncommented) manuscript text retrieved on 2026-11-23; editorial suggestions from the chat are not substituted automatically.
 
 ## Preview
 
