@@ -335,7 +335,7 @@ const collections = [
             "media/women_whisper-c5e1c1c23558.wav"
           ]
         ],
-        "text": "I love this moment. Just you, me, and the soft light. I wish we could pause time right here.",
+        "text": "By the way, I love this moment. Just you, me, and the soft light. I wish we could pause time right here.",
         "prompt": "The Norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky. Others have tried to explain the phenomenon physically. Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.",
         "instruction": ""
       },
